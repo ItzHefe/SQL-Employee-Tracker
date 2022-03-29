@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
 
 // turn on connection to db and server
@@ -57,7 +57,7 @@ function viewAllEmployees() {
       console.log('VIEW ALL EMPLOYEES');
       console.log('\n');
       console.table(res);
-      prompt();
+      mainMenu();
   });
 }
 
@@ -73,7 +73,7 @@ function viewByDepartment() {
       console.log('VIEW EMPLOYEE BY DEPARTMENT');
       console.log('\n');
       console.table(res);
-      prompt();
+      mainMenu();
   });
 }
 
@@ -89,7 +89,7 @@ function viewAllRoles() {
       console.log('VIEW EMPLOYEE BY ROLE');
       console.log('\n');
       console.table(res);
-      prompt();
+      mainMenu();
   });
 
 }
