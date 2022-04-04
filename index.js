@@ -1,6 +1,7 @@
 const res = require('express/lib/response');
 const inquirer = require('inquirer');
 const connection = require('./config/connection.js');
+const consoleTable = require('console.table');
 const util = require('util');
 
 connection.query = util.promisify(connection.query);
